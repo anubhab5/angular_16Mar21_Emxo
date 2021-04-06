@@ -1,0 +1,13 @@
+h2  {
+    color: blue;
+}
+
+.pass {
+    color: green;
+    background-color: greenyellow;
+}
+
+.fail {
+    color: white;
+    background-color: red;
+}

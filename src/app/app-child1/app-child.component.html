@@ -1,0 +1,43 @@
+<h2>This is really easy...</h2>
+
+<!-- DATA BINDING  -->
+<!-- 1. INTERPOLATION {{}} -->
+<!-- <h3>{{ firstName }}</h3>
+{{ myMarks }}
+<hr />
+{{ 1 + 1 }}
+<hr>
+{{getMyName()}} -->
+<!-- DIRECTIVE -->
+<!-- built in directive -->
+<!-- structural directive -->
+
+<!-- <div>
+  parent div to ngIf
+  <div *ngIf="myMarks >= 40">The user {{ firstName }} has Passed.
+      <span>this is span</span>
+      <div *ngIf=""></div>
+  </div>
+</div> -->
+
+<!-- ngFor -->
+<!-- <div *ngFor="let student of getStudentList(); let i = index">
+  <span *ngIf="checkIfPassed(i)">{{student.name}} and {{student.marks}}</span>
+</div> -->
+
+<!-- Attribute directive
+1. ngStyle
+2. ngClass -->
+<!-- ngStyle -->
+<!-- <div *ngFor="let student of getStudentList(); let i = index">
+  <span [ngStyle]="{ color: student.marks >= 40 ? 'green' : 'red' }"
+    >{{ student.name }} and {{ student.marks }}</span
+  >
+</div> -->
+
+<!-- ngClass -->
+<div *ngFor="let student of getStudentList(); let i = index">
+  <span [ngClass]="{ 'pass': student.marks >= 40, 'fail': student.marks < 40 }"
+    >{{ student.name }} and {{ student.marks }}</span
+  >
+</div>
