@@ -1,0 +1,11 @@
+.student-detail {
+    background-color: greenyellow;
+    color: #000;
+    font-size: 2rem;
+    width: 100px;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}

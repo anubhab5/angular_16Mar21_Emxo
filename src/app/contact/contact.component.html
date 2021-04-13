@@ -1,0 +1,19 @@
+<div class="container" [formGroup]='contactForm'>
+    <div>
+        <label for="">Name</label>
+        <input formControlName="name" type="text" placeholder="Enter Name">
+    </div>
+    <div>
+        <label for="">Email</label>
+        <input formControlName="email" type="email" placeholder="Enter Email">
+    </div>
+    <div>
+        <label for="">Phone</label>
+        <input formControlName="phone" type="number" placeholder="Enter Phone">
+    </div>
+    <div>
+        <label for="">Hobby</label>
+        <input formControlName="hobby" type="text" placeholder="Enter Hobby">
+    </div>
+</div>
+<input type="button" value="Get Data" (click)="showData()">

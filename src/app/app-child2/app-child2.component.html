@@ -1,1 +1,9 @@
-<p>app-child2 works!</p>
+<p>child is working</p>
+<div *ngFor="let stud of inputStudentList">
+  <span (click)="studentClicked(stud.name)" class="student-detail">{{ stud.name }}</span>
+</div>
+<input type="button" value="Get Counter in Child" (click)="getCounterDetail()">
+<input type="button" value="Increase" (click)="incrementCounterByOne()">
+
+<hr>
+<h3>Generated Number is {{randomNumberGenerated}}</h3>

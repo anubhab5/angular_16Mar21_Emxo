@@ -1,0 +1,94 @@
+<h2>This is really easy...</h2>
+
+<!-- DATA BINDING  -->
+<!-- 1. INTERPOLATION {{}} -->
+<!-- <h3>{{ firstName }}</h3>
+{{ myMarks }}
+<hr />
+{{ 1 + 1 }}
+<hr>
+{{getMyName()}} -->
+<!-- DIRECTIVE -->
+<!-- built in directive -->
+<!-- structural directive -->
+
+<!-- <div>
+  parent div to ngIf
+  <div *ngIf="myMarks >= 40">The user {{ firstName }} has Passed.
+      <span>this is span</span>
+      <div *ngIf=""></div>
+  </div>
+</div> -->
+
+<!-- ngFor -->
+<!-- <div *ngFor="let student of getStudentList(); let i = index">
+  <span *ngIf="checkIfPassed(i)">{{student.name}} and {{student.marks}}</span>
+</div> -->
+
+<!-- Attribute directive
+1. ngStyle
+2. ngClass -->
+<!-- ngStyle -->
+<!-- <div *ngFor="let student of getStudentList(); let i = index">
+  <span [ngStyle]="{ color: student.marks >= 40 ? 'green' : 'red' }"
+    >{{ student.name }} and {{ student.marks }}</span
+  >
+</div> -->
+
+<!-- ngClass -->
+<!-- <div *ngFor="let student of getStudentList(); let i = index">
+  <span [ngClass]="{ 'pass': student.marks >= 40, 'fail': student.marks < 40 }"
+    >{{ student.name }} and {{ student.marks }}</span
+  >
+</div> -->
+
+<!-- ng generate component <componentName> -->
+<!-- This is parent component
+Student Clicked is: - {{studentNameClicked}} and mark is {{selectedStudentMark}}
+<hr>
+<input type="button" value="Get Counter" (click)="getCounterValue()">
+<input type="button" value="Increment Counter by 1" (click)="incrementCounterByOne()">
+<hr />
+<app-app-child2 [inputStudentList]="studentList" (studentEmitter)="getStudentName($event)"></app-app-child2> -->
+
+<h3>Pipes</h3>
+<h3>Date pipes</h3>
+{{ todaysDate | date: "shortTime" }}
+<br />
+{{ todaysDate | date: "fullDate" }}
+<br />
+{{ todaysDate | date: "d/M/y" }}
+<br />
+<!-- {{ todaysDate | date: "d/M/yy" }} -->
+{{ todaysDate | date: "dd/MMM/yy" }}
+<br />
+<hr />
+<h3>Currency Pipe</h3>
+<!-- {{myCartAmount | currency}} -->
+{{ myCartAmount | currency: "INR" }}
+<!-- {{myCartAmount | currency: "AUD"}} -->
+
+<!-- <hr />
+<h3>Decimal Pipe</h3>
+{{ decimalValue | number: "3.1-1" }}
+<hr />
+<h3>JSON Pipe</h3>
+{{ studentList | json }}
+<hr />
+<h3>Lowercase Pipe</h3>
+{{ myNameinUppercase | lowercase }}
+<hr />
+<h3>Lowercase Pipe</h3>
+{{ myNameinlOWERcase | uppercase }}
+<hr />
+<h3>Slice Pipe</h3>
+{{ myNameinUppercase | slice: 0:3 }} -->
+<hr>
+<!-- {{power | increasepower: 4}} -->
+
+<div testHighlight>
+  {{myLongString}}
+</div>
+
+<input type="button" value="Generate Number" (click)="generateRandomNumber()">
+<app-app-child2 [inputStudentList]="studentList" [randomNumberGenerated]="generatedNumber"></app-app-child2>
